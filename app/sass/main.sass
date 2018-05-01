@@ -1,0 +1,87 @@
+@import "libs"
+@import "fonts"
+@import "vars"
+
+//main page
+
+// set bg
+body
+	background-image: url("../img/draw.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+
+
+// laeft panel
+.leftPanel
+	margin-top: 8%
+	.logoContainer
+		text-align: center
+		&::after 
+			content: ""
+			background-image: url("../img/main-page/drawup.png")	
+			background-size: 370px 290px
+			background-repeat: no-repeat
+			z-index: -1
+			width: 370px
+			height: 300px
+			position: absolute
+			left: 35px
+			top: -37px
+	&__logo
+		width: 200px
+		height: 200px
+	&__headerNews
+		font-family: Roboto Condensed
+		font-size: 30px
+		line-height: 20px
+		font-weight: 400
+		text-align: center
+		color: #5b5b6e
+	&__news 
+		width: 100%
+	
+// news block style
+.news
+	&__block
+		background-color: #efefef
+		margin-bottom: 30px
+		position: relative
+		&::after
+			content: ""
+			position: absolute
+			box-shadow: 0 -26px 27px 10px
+			bottom: -6px
+			width: 49px
+			z-index: -1
+			left: 26px
+		&::before
+			content: ""
+			position: absolute
+			box-shadow: 0 -26px 27px 10px
+			bottom: -6px
+			width: 49px
+			z-index: -1
+			right: 26px
+			
+	&__info
+		padding: 20px 15px
+	&__header
+		margin: 0
+		color: #5b5b6e
+		padding-bottom: 10px
+		border-bottom: solid #adadb6 1px
+	&__about
+		line-height: 20px
+		overflow: hidden
+		margin: 0
+		color: #5b5b6e
+		margin-top: 12px
+		height: 100px
+		
+		
+
+
+
+
+@import "media" 
