@@ -34,7 +34,7 @@ body
 		width: 200px
 		height: 200px
 	&__headerNews
-		font-family: Roboto Condensed
+		font-family: Roboto Condensed, arial
 		font-size: 30px
 		line-height: 20px
 		font-weight: 400
@@ -89,16 +89,20 @@ body
 		font-size: 30px
 		color: #5b5b6e
 		text-transform: uppercase
-		transform: translateY(-40%)
+		transform: translateY(-60%)
 	&__menu
 		display: flex
 
 // top menu
 .nav
 	position: relative
+	display: flex 
+	justify-content: center
+	margin-bottom: 49px
 	&__list
 		display: flex
 		list-style-type: none
+		padding: 0
 	&__list::before
 		content: ""
 		position: absolute
@@ -129,5 +133,47 @@ body
 		border-right: #fff solid 1px
 		border-radius: 5%
 
+.menu
+	display: flex
+	align-items: center
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		padding-left: 40px
+	&__desk
+		position: relative
+		img
+			width: 130px
+	&__desk:after
+		position: absolute
+		content: ""
+		background-image: url("../img/main-page/arrow.png")
+		background-repeat: no-repeat
+		z-index: -1
+		width: 370px
+		height: 300px
+		top: -68px
+		left: 77px
+	&__quote
+		background-color: #f0f0f0
+		height: 142px
+		text-align: center
+		line-height: 36px
+		font-size: 24px
+		font-family: Roboto Condensed
+		display: flex
+		align-items: center
+		color: #5b5b6e
+	
+// main description and slider
+.content
+	display: flex
+	width: 100%
+	&__description
+		width: 30%
+	&__slider
+		width: 60%
+		margin-left: 10%
 	
 @import "media" 
