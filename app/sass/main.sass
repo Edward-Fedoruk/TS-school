@@ -10,6 +10,7 @@ body
 	background-size: 100% 100%
 	background-repeat: no-repeat
 	position: relative
+	overflow-x: hidden
 
 .index
 	margin-top: 8%
@@ -98,31 +99,34 @@ body
 	position: relative
 	display: flex 
 	justify-content: center
-	margin-bottom: 49px
+	margin-bottom: 40px
 	&__list
 		display: flex
 		list-style-type: none
 		padding: 0
+		border: 1px solid #fff
 	&__list::before
 		content: ""
 		position: absolute
-		top: 44px
-		left: 47px
-		width: 110px
-		box-shadow: 0 -23px 9px 3px
+		top: 58px
+		left: 41px
+		width: 138px
+		box-shadow: 0 -23px 14px 3px
 		z-index: -1
+		transform: rotateZ(-2deg)
 	&__list::after
 		content: ""
 		position: absolute
-		top: 44px
-		right: 50px
-		width: 110px
-		box-shadow: 0 -23px 9px 3px
+		top: 58px
+		right: 41px
+		width: 138px
+		box-shadow: 0 -23px 14px 3px
 		z-index: -1
+		transform: rotateZ(2deg)
+
 	&__item
 		text-align: center
 		background: linear-gradient(to bottom, #f2f2f5, #e6e6eb)
-		border: #fff solid 1px
 		border-radius: 5%
 		padding: 3px 30px
 		border-right: 0.5px solid #c5c5cd
@@ -130,7 +134,7 @@ body
 	&__item:hover
 		background: #f2f2f5
 	&__item:last-child
-		border-right: #fff solid 1px
+		border-right: none
 		border-radius: 5%
 
 .menu
@@ -148,7 +152,7 @@ body
 	&__desk:after
 		position: absolute
 		content: ""
-		background-image: url("../img/main-page/arrow.png")
+		background-image: url("../img/main-page/arrow2.png")
 		background-repeat: no-repeat
 		z-index: -1
 		width: 370px
@@ -170,10 +174,102 @@ body
 .content
 	display: flex
 	width: 100%
+	margin-top: 25px
 	&__description
 		width: 30%
+	&__header
+		font-size: 30px
+		color: $main-color
+		margin-bottom: 15px
+		font-family: $roboto
+		margin-top: 10px
+	&__about
+		font-size: 14px
+		font-family: $serif
+		color: #282833
 	&__slider
-		width: 60%
-		margin-left: 10%
+		width: 63%
+		margin-left: 2%
+		border: 3px solid #fff
+		background-size: cover
+		max-height: 300px
+		position: relative
+	&__controlBar
+		position: absolute
+		display: flex
+		justify-content: space-between
+		top: -30px
+		left: 50%
+		transform: translateX(-50%)
+		width: 100px
+	&__Larrow
+		background-image: url("../img/main-page/arrow.png")
+		width: 25px
+		height: 20px
+		background-repeat: no-repeat
+		background-size: 25px 15px
+		&:hover
+			cursor: pointer
+	&__Rarrow
+		background-image: url("../img/main-page/arrow3.png")
+		width: 25px
+		height: 20px
+		background-repeat: no-repeat
+		background-size: 52px 15px
+		&:hover
+			cursor: pointer
+	&__slide
+		font-family: $lobster
+		width: 10px
+		text-align: center
+		font-weight: 400
+		color: $main-color
+		border-radius: 30%
+		&:hover
+			cursor: pointer
+	// slider buttons
+	&__prev, &__next
+		position: absolute
+		top: 50% 
+		width: 40px
+		height: 80px
+		background-color: #fff
+		display: flex
+		align-items: center
+		justify-content: center
+		transform: translateY(-50%)
+		opacity: .4
+		border-radius: 8%
+		&:hover
+			opacity: .8
+			cursor: pointer
+		i
+			color: lighten($main-color, 20%)
+			font-size: 30px
+	&__prev
+		margin-left: 2%
+	&__next
+		right: 0
+		margin-right: 2%
+// adding to active slide
+.selectedSlide
+	background-color: lighten(#6b6a82, 40%)
+	
+.gallery
+	&__imgs
+		display: flex
+		justify-content: space-around
+		max-width: 700px
+		img
+			height: 95px
+			width: 125px
+			border: 3px solid #fff
+	&__header
+		font-size: 30px
+		color: $main-color
+		font-family: $roboto
+	
+	
+	
 	
 @import "media" 
