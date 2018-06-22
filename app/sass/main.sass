@@ -191,9 +191,21 @@ body
 		width: 63%
 		margin-left: 2%
 		border: 3px solid #fff
-		background-size: cover
 		max-height: 300px
 		position: relative
+		box-shadow: 2px 3px 12px -2px
+		overflow-x: hidden
+		&:hover 
+			.content__prev
+				opacity: .4
+				&:hover
+					opacity: .8
+					cursor: pointer
+			.content__next
+				opacity: .4
+				&:hover
+					opacity: .8
+					cursor: pointer
 	&__controlBar
 		position: absolute
 		display: flex
@@ -238,11 +250,10 @@ body
 		align-items: center
 		justify-content: center
 		transform: translateY(-50%)
-		opacity: .4
+		opacity: 0
 		border-radius: 8%
-		&:hover
-			opacity: .8
-			cursor: pointer
+		z-index: 1
+		transition: all 0.3s
 		i
 			color: lighten($main-color, 20%)
 			font-size: 30px
@@ -251,10 +262,22 @@ body
 	&__next
 		right: 0
 		margin-right: 2%
+	&__slideIMG
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0px
+		display: flex
+		transition: left 0.25s ease-out
+		img
+			width: 100%
+			height: 100%	
 // adding to active slide
 .selectedSlide
 	background-color: lighten(#6b6a82, 40%)
 	
+
+
 .gallery
 	&__imgs
 		display: flex

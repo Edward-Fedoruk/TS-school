@@ -10,11 +10,12 @@ var gulp = require('gulp'),
 
 
 gulp.task('js', function() {
-  return gulp.src('app/js/script.js') 
-		.pipe(uglify())
+  return gulp.src(['app/js/script.js']) 
+		.pipe(concat('common.min.js'))
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.stream());
 });
+		//.pipe(uglify())
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
