@@ -109,7 +109,7 @@ body
 		content: ""
 		position: absolute
 		top: 58px
-		left: 41px
+		left: 13px
 		width: 138px
 		box-shadow: 0 -23px 14px 3px
 		z-index: -1
@@ -118,12 +118,11 @@ body
 		content: ""
 		position: absolute
 		top: 58px
-		right: 41px
+		right: 13px
 		width: 138px
 		box-shadow: 0 -23px 14px 3px
 		z-index: -1
 		transform: rotateZ(2deg)
-
 	&__item
 		text-align: center
 		background: linear-gradient(to bottom, #f2f2f5, #e6e6eb)
@@ -140,11 +139,12 @@ body
 .menu
 	display: flex
 	align-items: center
+	margin-top: 50px
 	&__wrapper
 		display: flex
 		flex-wrap: wrap
 		flex-direction: column
-		padding-left: 40px
+		padding-left: 13%
 	&__desk
 		position: relative
 		img
@@ -169,12 +169,36 @@ body
 		display: flex
 		align-items: center
 		color: #5b5b6e
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 70px
+			left: 31px
+			width: 109px
+			box-shadow: 0 61px 18px 6px
+			z-index: -1
+			transform: rotate(-2deg)
+		&::after
+			content: ""
+			position: absolute
+			top: 70px
+			right: 31px
+			width: 109px
+			box-shadow: 0 61px 18px 6px
+			z-index: -1
+			transform: rotate(2deg)
 	
 // main description and slider
+.slid__wrapper 
+	width: 70%
+	margin-left: 2%
+	position: relative
 .content
 	display: flex
 	width: 100%
 	margin-top: 25px
+	min-height: 330px
 	&__description
 		width: 30%
 	&__header
@@ -188,10 +212,10 @@ body
 		font-family: $serif
 		color: #282833
 	&__slider
-		width: 63%
-		margin-left: 2%
+		width: 100%
 		border: 3px solid #fff
-		max-height: 300px
+		max-height: 400px
+		min-height: 300px
 		position: relative
 		box-shadow: 2px 3px 12px -2px
 		overflow-x: hidden
@@ -220,16 +244,12 @@ body
 		height: 20px
 		background-repeat: no-repeat
 		background-size: 25px 15px
-		&:hover
-			cursor: pointer
 	&__Rarrow
 		background-image: url("../img/main-page/arrow3.png")
 		width: 25px
 		height: 20px
 		background-repeat: no-repeat
 		background-size: 52px 15px
-		&:hover
-			cursor: pointer
 	&__slide
 		font-family: $lobster
 		width: 10px
@@ -237,8 +257,6 @@ body
 		font-weight: 400
 		color: $main-color
 		border-radius: 30%
-		&:hover
-			cursor: pointer
 	// slider buttons
 	&__prev, &__next
 		position: absolute
@@ -281,8 +299,7 @@ body
 .gallery
 	&__imgs
 		display: flex
-		justify-content: space-around
-		max-width: 700px
+		justify-content: space-between
 		img
 			height: 95px
 			width: 125px
@@ -292,6 +309,8 @@ body
 		color: $main-color
 		font-family: $roboto
 	
+
+
 	
 	
 	
