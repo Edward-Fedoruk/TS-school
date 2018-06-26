@@ -7,7 +7,7 @@ const slider		   = document.querySelector(".content__slider"),
 			sliderIMG 	 = slider.querySelector(".content__slideIMG"),
 			sliderAmount = sliderIMG.querySelectorAll("img").length,
 			slideWidth 	 = sliderIMG.clientWidth;
-			
+			//slide
 let widthCounter = 0;
 let slideCounter = 0;
 
