@@ -1,9 +1,9 @@
-const slider		   = document.querySelector(".content__slider"),
+const 	slider		 = document.querySelector(".content__slider"),
 			control      = document.querySelectorAll(".content__slide"),
-			prev 		     = slider.querySelector(".content__prev"),
+			prev 		    = slider.querySelector(".content__prev"),
 			next         = slider.querySelector(".content__next"),
-			lArrow 		   = document.querySelector(".content__Larrow"),
-			RArrow		   = document.querySelector(".content__Rarrow"),
+			lArrow 		 = document.querySelector(".content__Larrow"),
+			RArrow	    = document.querySelector(".content__Rarrow"),
 			sliderIMG 	 = slider.querySelector(".content__slideIMG"),
 			sliderAmount = sliderIMG.querySelectorAll("img").length,
 			slideWidth 	 = sliderIMG.clientWidth;
