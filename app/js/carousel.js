@@ -4,39 +4,64 @@ const carousel = document.querySelector(".main__gallery"),
 			carouselBlock = carousel.querySelector(".gallery__imgs"),
 			carouselWrap = carousel.querySelector(".gallery__wrap"),
 			scrolWidth = carouselWrap.offsetWidth,
-			fullSize = carouselBlock.offsetWidth,
-			allSlides = carousel.querySelectorAll("img");
+			imgWidth = carousel.querySelector("img").clientWidth;
+			fullSize = carouselBlock.offsetWidth;
+let	allSlides = carousel.querySelectorAll("img");
 
 prevButton.addEventListener("click", slideL);
 nextButton.addEventListener("click", slideR);
 
-const takePX = () => carouselBlock.style.left === "" 
-	? +carouselBlock.style.left
-	: parseInt(carouselBlock.style.left)
+const parsePX = elem => elem === "" ? 0 : parseFloat(elem)
 
-// return true if it will reach uttermost slide
-const checkEnd = () => fullSize + takePX() < carouselWrap.offsetWidth
+const insertSlides = position =>
+	position 
+	 ? allSlides.forEach(element => carouselBlock.appendChild(element.cloneNode())) 
+	 : allSlides.forEach(element => carouselBlock.insertBefore(element.cloneNode(), allSlides[0]))
 
-const checkStart = () => takePX() > 0
+const takeSlidesWidth = slides => slides.length * slides[0].offsetWidth;
 
-const append = () => [...allSlides].some((elem, i) => {
-	const slide = allSlides[i].cloneNode(true);
-	carouselBlock.appendChild(slide);
-	return i <= 4 ? false : true;
-})
+const incrementPos = value => parsePX(carouselBlock.style.left) + value;
 
-const remove = () => [...allSlides].some((elem, i) => {
-	const slide = allSlides[i].remove();
-	return i <= 4 ? false : true;
-})
+const transformX = width => carouselBlock.style.left = `${incrementPos(width)}px`
+
+//const checkPos = pos => takeSlidesWidth(docum
+
+const initialWidth = takeSlidesWidth(allSlides);
+insertSlides(true);
+insertSlides(false);
+transformX(-initialWidth);
 
 function slideR() {
-	carouselBlock.style.left = `${takePX() - scrolWidth / 2}px`;
-	append();
-	remove();
+	transformX(-allSlides[0].offsetWidth);
 }
 
 function slideL() {
-	carouselBlock.style.left = `${takePX() + scrolWidth / 2}px`;
-	//checkStart() 
+	transformX(allSlides[0].offsetWidth);
 }
+
+// const parsPX = (elem) => elem === ""
+// 	? 0
+// 	: parseFloat(elem)
+
+// let removedSlides = [];
+// const removeSlide = () => {
+// 	allSlides = carousel.querySelectorAll("img");
+// 	for(let i = 0; i < 4; i ++) {
+// 		removedSlides.push(allSlides[i].cloneNode());
+// 		//allSlides[i].remove();
+// 	}
+// } 
+
+// const appendSlide = () => {
+// 	removedSlides.forEach(slide => {
+// 		carouselBlock.appendChild(slide);
+// 	});
+// 	removedSlides = [];
+// }
+
+// function slideR() {
+// 	carouselBlock.style.left = `${parsPX(carouselBlock.style.left) - imgWidth * 2}px`;
+// 	removeSlide();
+// 	appendSlide();
+// }
+
