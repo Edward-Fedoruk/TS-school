@@ -32,11 +32,30 @@ insertSlides(false);
 transformX(-initialWidth);
 
 function slideR() {
-	transformX(-allSlides[0].offsetWidth);
+	const counter = transformX(-allSlides[0].offsetWidth);
+	console.log(counter, takeSlidesWidth(carousel.querySelectorAll("img")) );
+
+	if(parsePX(counter) < -takeSlidesWidth(carousel.querySelectorAll("img")) + carouselWrap.offsetWidth) {
+		carouselBlock.style.transition = "null";
+		transformX(initialWidth + allSlides[0].offsetWidth);
+		setTimeout(() => {
+			carouselBlock.style.transition = "left 0.5s";
+			transformX(-allSlides[0].offsetWidth)
+		}, 5)
+	}
 }
 
 function slideL() {
-	transformX(allSlides[0].offsetWidth);
+	const counter = transformX(allSlides[0].offsetWidth);
+
+	if(parsePX(counter) > 0) {
+		carouselBlock.style.transition = "null";
+		transformX(-initialWidth - allSlides[0].offsetWidth);
+		setTimeout(() => {
+			carouselBlock.style.transition = "left 0.5s";
+			transformX(allSlides[0].offsetWidth)
+		}, 5)
+	}
 }
 
 // const parsPX = (elem) => elem === ""
