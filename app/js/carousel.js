@@ -1,22 +1,22 @@
-const carousel = document.querySelector(".main__gallery"),
-			prevButton = carousel.querySelector(".prev"),
-			nextButton = carousel.querySelector(".next"),
+const carousel 			= document.querySelector(".main__gallery"),
+			prevButton 		= carousel.querySelector(".prev"),
+			nextButton 		= carousel.querySelector(".next"),
 			carouselBlock = carousel.querySelector(".gallery__imgs"),
-			carouselWrap = carousel.querySelector(".gallery__wrap"),
-			scrolWidth = carouselWrap.offsetWidth,
-			imgWidth = carousel.querySelector("img").clientWidth;
-			fullSize = carouselBlock.offsetWidth;
-let	allSlides = carousel.querySelectorAll("img");
+			carouselWrap 	= carousel.querySelector(".gallery__wrap"),
+			scrolWidth 		= carouselWrap.offsetWidth,
+			imgWidth 			= carousel.querySelector("img").clientWidth;
+			fullSize 			= carouselBlock.offsetWidth;
+let	allSlides 			= carousel.querySelectorAll("img");
 
 prevButton.addEventListener("click", slideL);
 nextButton.addEventListener("click", slideR);
 
 const parsePX = elem => elem === "" ? 0 : parseFloat(elem)
 
-const insertSlides = position =>
-	position 
-	 ? allSlides.forEach(element => carouselBlock.appendChild(element.cloneNode())) 
-	 : allSlides.forEach(element => carouselBlock.insertBefore(element.cloneNode(), allSlides[0]))
+const insertSlides = () => {
+	allSlides.forEach(element => carouselBlock.appendChild(element.cloneNode()));
+	allSlides.forEach(element => carouselBlock.insertBefore(element.cloneNode(), allSlides[0]));
+}
 
 const takeSlidesWidth = slides => slides.length * slides[0].offsetWidth;
 
@@ -27,9 +27,7 @@ const transformX = width => carouselBlock.style.left = `${incrementPos(width)}px
 //const checkPos = pos => takeSlidesWidth(docum
 
 const initialWidth = takeSlidesWidth(allSlides);
-insertSlides(true);
 insertSlides(false);
-transformX(-initialWidth);
 
 function slideR() {
 	const counter = transformX(-allSlides[0].offsetWidth);
@@ -57,30 +55,3 @@ function slideL() {
 		}, 5)
 	}
 }
-
-// const parsPX = (elem) => elem === ""
-// 	? 0
-// 	: parseFloat(elem)
-
-// let removedSlides = [];
-// const removeSlide = () => {
-// 	allSlides = carousel.querySelectorAll("img");
-// 	for(let i = 0; i < 4; i ++) {
-// 		removedSlides.push(allSlides[i].cloneNode());
-// 		//allSlides[i].remove();
-// 	}
-// } 
-
-// const appendSlide = () => {
-// 	removedSlides.forEach(slide => {
-// 		carouselBlock.appendChild(slide);
-// 	});
-// 	removedSlides = [];
-// }
-
-// function slideR() {
-// 	carouselBlock.style.left = `${parsPX(carouselBlock.style.left) - imgWidth * 2}px`;
-// 	removeSlide();
-// 	appendSlide();
-// }
-
