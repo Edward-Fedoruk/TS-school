@@ -13,7 +13,7 @@ body
 	overflow-x: hidden
 
 .index
-	margin-top: 5%
+	padding-top: 5%
 
 // laeft panel
 .leftPanel
@@ -101,20 +101,23 @@ body
 
 // top menu
 .nav
-	position: relative
 	display: flex 
 	justify-content: center 
 	margin-bottom: 40px
 	&__list
+		position: relative
 		display: flex
 		list-style-type: none
 		padding: 0
 		border: 1px solid #fff
+		a
+			text-decoration: none
+			color: $main-color
 	&__list::before
 		content: ""
 		position: absolute
-		top: 58px
-		left: 30px
+		top: 42px
+		left: 5px
 		width: 138px
 		box-shadow: 0 -23px 14px 3px
 		z-index: -1
@@ -122,8 +125,8 @@ body
 	&__list::after
 		content: ""
 		position: absolute
-		top: 58px
-		right: 30px
+		top: 42px
+		right: 5px
 		width: 138px
 		box-shadow: 0 -23px 14px 3px
 		z-index: -1
@@ -167,6 +170,7 @@ body
 		left: 77px
 	&__quote
 		background-color: #f0f0f0
+		padding: 10px
 		height: 142px
 		text-align: center
 		line-height: 36px
@@ -235,33 +239,7 @@ body
 				opacity: .4
 				&:hover
 					opacity: .8
-	&__controlBar
-		position: absolute
-		display: flex
-		justify-content: space-between
-		top: -30px
-		left: 50%
-		transform: translateX(-50%)
-		width: 100px
-	&__Larrow
-		background-image: url("../img/main-page/arrow.png")
-		width: 25px
-		height: 20px
-		background-repeat: no-repeat
-		background-size: 25px 15px
-	&__Rarrow
-		background-image: url("../img/main-page/arrow3.png")
-		width: 25px
-		height: 20px
-		background-repeat: no-repeat
-		background-size: 52px 15px
-	&__slide
-		font-family: $lobster
-		width: 10px
-		text-align: center
-		font-weight: 400
-		color: $main-color
-		border-radius: 30%
+
 	// slider buttons
 	&__prev, &__next
 		height: 80px
@@ -282,9 +260,7 @@ body
 		img
 			width: 531px
 			height: 344px	
-// adding to active slide
-.selectedSlide
-	background-color: lighten(#6b6a82, 40%)
+
 // general button's style
 .prev, .next
 	position: absolute
@@ -339,6 +315,6 @@ body
 		color: $main-color
 		font-family: $roboto
 	
-
+@import "gallery"
  
 @import "media" 

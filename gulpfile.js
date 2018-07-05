@@ -10,8 +10,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('js', function() {
-	return gulp.src(['app/js/slider.js',
-									'app/js/carousel.js']) 
+	return gulp.src(['app/js/slider.js']) 
 		.pipe(concat('common.min.js'))
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.stream());
