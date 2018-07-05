@@ -1,57 +1,66 @@
-const carousel 			= document.querySelector(".main__gallery"),
-			prevButton 		= carousel.querySelector(".prev"),
-			nextButton 		= carousel.querySelector(".next"),
-			carouselBlock = carousel.querySelector(".gallery__imgs"),
-			carouselWrap 	= carousel.querySelector(".gallery__wrap"),
-			scrolWidth 		= carouselWrap.offsetWidth,
-			imgWidth 			= carousel.querySelector("img").clientWidth;
-			fullSize 			= carouselBlock.offsetWidth;
-let	allSlides 			= carousel.querySelectorAll("img");
+// (function() {
 
-prevButton.addEventListener("click", slideL);
-nextButton.addEventListener("click", slideR);
+// 	const carousel 					 = document.querySelector(".main__gallery"),
+// 				prev 							 = carousel.querySelector(".prev"),
+// 				next 							 = carousel.querySelector(".next"),
+// 				carouselBlock 		 = carousel.querySelector(".gallery__imgs"),
+// 				carouselWrap 			 = carousel.querySelector(".gallery__wrap"),
+// 				allSlides 			   = carousel.querySelectorAll("img"),
+// 				oneSlideWidth 		 = carousel.querySelector("img").offsetWidth,
+// 				initialSlidesWidth = allSlides.length * oneSlideWidth;
 
-const parsePX = elem => elem === "" ? 0 : parseFloat(elem)
+// 	prev.addEventListener("click", slideLeft);
+// 	next.addEventListener("click", slideRight);
 
-const insertSlides = () => {
-	allSlides.forEach(element => carouselBlock.appendChild(element.cloneNode()));
-	allSlides.forEach(element => carouselBlock.insertBefore(element.cloneNode(), allSlides[0]));
-}
+// 	// make copy of slides and insert them
+// 	const insertSlides = () => {
+// 		allSlides.forEach(element => {
+// 			carouselBlock.appendChild(element.cloneNode());
+// 			carouselBlock.insertBefore(element.cloneNode(), allSlides[0]);
+// 		});
+// 	}
+// 	insertSlides();
 
-const takeSlidesWidth = slides => slides.length * slides[0].offsetWidth;
 
-const incrementPos = value => parsePX(carouselBlock.style.left) + value;
+// 	const parsePX = elem => elem === "" ? 0 : parseFloat(elem);
 
-const transformX = width => carouselBlock.style.left = `${incrementPos(width)}px`
+// 	const incrementPos = value => parsePX(carouselBlock.style.left) + value;
 
-//const checkPos = pos => takeSlidesWidth(docum
+// 	const transformX = width => carouselBlock.style.left = `${incrementPos(width)}px`;
 
-const initialWidth = takeSlidesWidth(allSlides);
-insertSlides(false);
+// 	const unsetTrsn = () => carouselBlock.style.transition = "null";
 
-function slideR() {
-	const counter = transformX(-allSlides[0].offsetWidth);
-	console.log(counter, takeSlidesWidth(carousel.querySelectorAll("img")) );
+// 	const setTrsn = () => carouselBlock.style.transition = "left 0.5s ease-in-out";
 
-	if(parsePX(counter) < -takeSlidesWidth(carousel.querySelectorAll("img")) + carouselWrap.offsetWidth) {
-		carouselBlock.style.transition = "null";
-		transformX(initialWidth + allSlides[0].offsetWidth);
-		setTimeout(() => {
-			carouselBlock.style.transition = "left 0.5s";
-			transformX(-allSlides[0].offsetWidth)
-		}, 5)
-	}
-}
 
-function slideL() {
-	const counter = transformX(allSlides[0].offsetWidth);
+// 	function slideRight() {
+// 		const counter = transformX(-oneSlideWidth);
 
-	if(parsePX(counter) > 0) {
-		carouselBlock.style.transition = "null";
-		transformX(-initialWidth - allSlides[0].offsetWidth);
-		setTimeout(() => {
-			carouselBlock.style.transition = "left 0.5s";
-			transformX(allSlides[0].offsetWidth)
-		}, 5)
-	}
-}
+// 		if(parsePX(counter) < -carouselBlock.offsetWidth + carouselWrap.offsetWidth) {
+// 			unsetTrsn();
+// 			transformX(initialSlidesWidth + oneSlideWidth);
+
+// 			setTimeout(() => {
+// 				setTrsn();
+// 				transformX(-oneSlideWidth)
+// 			}, 10)
+// 		}
+// 	}
+
+// 	function slideLeft() {
+// 		const counter = transformX(oneSlideWidth);
+
+// 		if(parsePX(counter) > 0) {
+// 			unsetTrsn();
+// 			transformX(-initialSlidesWidth - oneSlideWidth);
+
+// 			setTimeout(() => {
+// 				setTrsn();
+// 				transformX(oneSlideWidth);
+// 			}, 10)
+// 		}
+// 	}
+
+// 	slideRight();
+
+// })();

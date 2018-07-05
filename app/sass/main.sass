@@ -103,7 +103,7 @@ body
 .nav
 	position: relative
 	display: flex 
-	justify-content: center
+	justify-content: center 
 	margin-bottom: 40px
 	&__list
 		display: flex
@@ -114,7 +114,7 @@ body
 		content: ""
 		position: absolute
 		top: 58px
-		left: 13px
+		left: 30px
 		width: 138px
 		box-shadow: 0 -23px 14px 3px
 		z-index: -1
@@ -123,7 +123,7 @@ body
 		content: ""
 		position: absolute
 		top: 58px
-		right: 13px
+		right: 30px
 		width: 138px
 		box-shadow: 0 -23px 14px 3px
 		z-index: -1
@@ -196,12 +196,13 @@ body
 			transform: rotate(2deg)
 	
 // main description and slider
-.slid__wrapper 
+.slide__wrapper 
 	width: 70%
 	margin-left: 2%
 	position: relative
 .content
 	display: flex
+	align-items: center
 	width: 100%
 	margin-top: 25px
 	min-height: 330px
@@ -221,7 +222,7 @@ body
 		width: 100%
 		border: 3px solid #fff
 		max-height: 400px
-		min-height: 300px
+		min-height: 350px
 		position: relative
 		box-shadow: 2px 3px 12px -2px
 		overflow-x: hidden
@@ -272,15 +273,15 @@ body
 		right: 0
 		margin-right: 2%
 	&__slideIMG
-		width: 100%
+		//width: 100%
 		height: 100%
 		position: absolute
 		left: 0px
 		display: flex
 		transition: left 0.25s ease-out
 		img
-			width: 100%
-			height: 100%	
+			width: 531px
+			height: 344px	
 // adding to active slide
 .selectedSlide
 	background-color: lighten(#6b6a82, 40%)
@@ -332,6 +333,7 @@ body
 			height: 130px
 			width: 185px
 			border: 3px solid #fff
+			margin-left: 2px
 	&__header
 		font-size: 30px
 		color: $main-color
@@ -339,7 +341,4 @@ body
 	
 
  
-	
-	
-	
 @import "media" 

@@ -22,7 +22,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename("main.min.css"))
-		.pipe(cleanCSS())
+		//.pipe(cleanCSS())
 		.pipe(autoprefixer({
 			browsers: ['last 15 versions'], 
 		}))
