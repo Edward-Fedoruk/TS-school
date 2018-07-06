@@ -16,24 +16,25 @@ body
 	padding-top: 5%
 
 // laeft panel
-.leftPanel
-	margin-top: 8%
-	.logoContainer
-		text-align: center
-		&::after 
-			content: ""
-			background-image: url("../img/main-page/drawup.png")	
-			background-size: 370px 290px
-			background-repeat: no-repeat
-			z-index: -1
-			width: 370px
-			height: 300px
-			position: absolute
-			left: 35px
-			top: -37px
+.logoContainer
+	text-align: center
+	&::after 
+		content: ""
+		background-image: url("../img/main-page/drawup.png")	
+		background-size: 370px 290px
+		background-repeat: no-repeat
+		z-index: -1
+		width: 370px
+		height: 300px
+		position: absolute
+		left: 35px
+		top: -37px
 	&__logo
 		width: 200px
 		height: 200px
+
+.leftPanel
+	margin-top: 8%
 	&__headerNews
 		font-family: Roboto Condensed, arial
 		font-size: 30px

@@ -15,7 +15,9 @@ class Carousel {
 		this.setInitialPosition();
 		this.setEvent();
 
-		if(autoSliding.start) this.startAutoSliding(autoSliding.time);
+		if(autoSliding.start) {
+			this.startAutoSliding(autoSliding.time);
+		}
 	}
 
 	setEvent() {
@@ -41,7 +43,7 @@ class Carousel {
 			setTimeout(() => {
 				this.imageWrapper.style.transition = this.timeFunction;
 				this.slideLeft();
-			}, 50)
+			}, 10)
 
 			this.rightCounter = this.allSlides.length + 1;
 		}
@@ -57,7 +59,7 @@ class Carousel {
 			setTimeout(() => {
 				this.imageWrapper.style.transition = this.timeFunction;
 				this.slideRight();
-			}, 50)
+			}, 10)
 
 			this.rightCounter = this.allSlides.length;
 		}
