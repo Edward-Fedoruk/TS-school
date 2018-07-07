@@ -1,0 +1,91 @@
+
+//styles for header 
+
+.newsPage
+  padding-top: 5%
+  &__image
+    width: 195px
+    height: 140px
+    margin: 20px
+    border: 3px solid #fff
+    img 
+      width: 100%
+      height: 100%
+  &__images
+    display: flex
+    justify-content: center
+    width: 100%
+    height: 100%
+  &__wrapper
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin: auto
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__pageName
+    margin: 0 auto
+    margin-top: 3vw
+    width: 300px
+    border-bottom: 2px solid lighten($main-color, 20%) 
+    h2
+      text-align: center
+      letter-spacing: 0.05em
+      font-size: 48px
+      line-height: 48px
+      text-transform: uppercase
+      font-family: $roboto
+      color: $second-color
+      width: 130px
+      margin: 0 auto
+      padding-bottom: 16px
+      border-bottom: 3px solid $main-color
+
+.newsPage
+  &__logoContainer
+    &::after
+      background-size: 340px 250px
+  &__logo
+    width: 200px
+    height: 200px
+
+// .activePage
+//   border-bottom: 2px solid #b44040
+
+// news part 
+
+.newsPage__newsList
+  margin-top: 5vw
+  margin-bottom: 2vw
+
+.newsList
+  &__img
+    width: 100%
+    border-radius: 4px
+  &__newsName
+    margin-top: 15px
+    margin-bottom: 0
+    font-size: 18px
+    font-weight: bold
+    color: $main-color
+    text-transform: uppercase
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+  &__about
+    font-size: 14px
+    margin: 0
+    color: $main-color
+    text-overflow: ellipsis
+  &__date
+    color: #8484aa
+    font-family: $lobster
+    font-size: 14px
+  &__block
+    background-color: #efefef
+  &__description
+    padding: 0 10px 10px 10px 
+
+    

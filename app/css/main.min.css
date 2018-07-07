@@ -2600,6 +2600,23 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  .newsPage__pageName {
+    margin: 0 auto;
+    margin-top: 3vw;
+    width: 300px;
+    border-bottom: 2px solid #8e8ea1; }
+    .newsPage__pageName h2 {
+      text-align: center;
+      letter-spacing: 0.05em;
+      font-size: 48px;
+      line-height: 48px;
+      text-transform: uppercase;
+      font-family: Roboto Condensed, sans-serif;
+      color: #282833;
+      width: 130px;
+      margin: 0 auto;
+      padding-bottom: 16px;
+      border-bottom: 3px solid #5b5b6e; }
 
 .newsPage__logoContainer::after {
   -webkit-background-size: 340px 250px;
@@ -2609,8 +2626,44 @@ body {
   width: 200px;
   height: 200px; }
 
-.activePage {
-  border-bottom: 2px solid #b44040; }
+.newsPage__newsList {
+  margin-top: 5vw;
+  margin-bottom: 2vw; }
+
+.newsList__img {
+  width: 100%;
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
+
+.newsList__newsName {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5b5b6e;
+  text-transform: uppercase;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.newsList__about {
+  font-size: 14px;
+  margin: 0;
+  color: #5b5b6e;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
+
+.newsList__date {
+  color: #8484aa;
+  font-family: Lobster, sans-serif;
+  font-size: 14px; }
+
+.newsList__block {
+  background-color: #efefef; }
+
+.newsList__description {
+  padding: 0 5px 10px 10px; }
 
 /*==========  Desktop First  ==========*/
 /* Extra Large Devices, Wide Screens */
