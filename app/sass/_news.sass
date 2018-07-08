@@ -25,22 +25,24 @@
     display: flex
     justify-content: space-between
     align-items: start
-  &__pageName
+
+// will be used for all other pages
+.pageName
+  margin: 0 auto
+  width: 300px
+  border-bottom: 2px solid lighten($main-color, 20%) 
+  h2
+    text-align: center
+    letter-spacing: 0.05em
+    font-size: 48px
+    line-height: 48px
+    text-transform: uppercase
+    font-family: $roboto
+    color: $second-color
+    width: 130px
     margin: 0 auto
-    width: 300px
-    border-bottom: 2px solid lighten($main-color, 20%) 
-    h2
-      text-align: center
-      letter-spacing: 0.05em
-      font-size: 48px
-      line-height: 48px
-      text-transform: uppercase
-      font-family: $roboto
-      color: $second-color
-      width: 130px
-      margin: 0 auto
-      padding-bottom: 16px
-      border-bottom: 3px solid $main-color
+    padding-bottom: 16px
+    border-bottom: 3px solid$main-color
 
 .newsPage
   &__logoContainer
@@ -50,11 +52,8 @@
     width: 200px
     height: 200px
 
-// .activePage
-//   border-bottom: 2px solid #b44040
 
 // news part 
-
 .newsPage__newsList
   margin-top: 5vw
   margin-bottom: 2vw
