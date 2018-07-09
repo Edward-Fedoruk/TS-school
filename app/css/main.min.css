@@ -2214,6 +2214,8 @@ body {
     width: 49px;
     z-index: -1;
     right: 26px; }
+  .news__block img {
+    width: 100%; }
 
 .news__info {
   padding: 20px 15px; }
