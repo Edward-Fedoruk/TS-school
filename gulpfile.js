@@ -12,10 +12,10 @@ var gulp = require('gulp'),
 gulp.task('js', function() {
 	return gulp.src(['app/js/slider.js']) 
 		.pipe(concat('common.min.js'))
+		//.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.stream());
 });
-		//.pipe(uglify())
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
@@ -36,7 +36,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch',['serve', 'sass', 'js'], function() {
-  gulp.watch('app/sass/*.sass', ["sass"])
+  gulp.watch('app/sass/**/*.sass', ["sass"])
   	.on('change', browserSync.reload);
   gulp.watch("app/*.html")
 		.on('change', browserSync.reload);
