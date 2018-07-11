@@ -1,5 +1,9 @@
 .teamPage
   padding-top: 5%
+  &__pageName
+    width: 350px
+    h2
+      width: 225px
 
 .anchorNav
   display: flex
@@ -13,6 +17,9 @@
     font-family: $roboto
     font-weight: bold
     color: $main-color
+    &:hover
+      transition: color 0.3s
+      color: $second-color
 
 .schoolDepartment
   &__teacherImage
@@ -29,12 +36,24 @@
     display: flex
     justify-content: center
     flex-wrap: wrap
+    margin-top: 5vw
   &__teacherName
-    font-size: 14px 
+    font-size: 24px 
     font-family: $roboto
     font-weight: bold
     text-transform: uppercase
     color: $main-color
-  &__administration
-    margin-top: 5vw
-    text-transform: uppercase
+  &__teacherPosition
+    font-size: 18px
+    margin-top: 0
+  &__department
+    padding-top: 6vw
+    padding-bottom: 3vw
+    // I was so lazy for making class
+    h2 
+      text-transform: uppercase
+      color: #8484aa
+      text-align: center
+      margin-left: 15vw
+      margin-right: 15vw
+      margin-bottom: 0
