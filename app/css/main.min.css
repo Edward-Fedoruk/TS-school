@@ -2834,6 +2834,24 @@ body {
     margin-bottom: 0;
     font-family: Roboto Condensed, sans-serif; }
 
+.valuesPage {
+  padding-top: 5%; }
+  .valuesPage__pageName {
+    width: 460px; }
+    .valuesPage__pageName h2 {
+      width: 350px; }
+  .valuesPage__h {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: Roboto Condensed, sans-serif; }
+  .valuesPage__p {
+    font-family: PT Serif Caption, sans-serif;
+    line-height: 27px;
+    font-size: 18px;
+    padding-bottom: 24px; }
+  .valuesPage__plainText {
+    padding: 3vw 0; }
+
 /*==========  Desktop First  ==========*/
 /* Extra Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
