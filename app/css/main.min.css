@@ -2322,7 +2322,7 @@ body {
     background: linear-gradient(to bottom, #f2f2f5, #e6e6eb);
     -webkit-border-radius: 5%;
             border-radius: 5%;
-    padding: 3px 30px;
+    padding: 3px 1.5vw;
     border-right: 0.5px solid #c5c5cd;
     cursor: pointer; }
   .nav__item:hover {
@@ -2866,6 +2866,13 @@ body {
       -webkit-border-radius: 50%;
               border-radius: 50%;
       margin-right: 20px; }
+
+.officialPage {
+  padding-top: 5%; }
+  .officialPage__pageName {
+    width: 380px; }
+    .officialPage__pageName h2 {
+      width: 280px; }
 
 /*==========  Desktop First  ==========*/
 /* Extra Large Devices, Wide Screens */
