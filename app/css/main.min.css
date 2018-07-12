@@ -2851,6 +2851,21 @@ body {
     padding-bottom: 24px; }
   .valuesPage__plainText {
     padding: 3vw 0; }
+  .valuesPage__listItem {
+    list-style: none;
+    font-size: 18px;
+    font-family: PT Serif Caption, sans-serif;
+    line-height: 27px; }
+    .valuesPage__listItem::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #5b5b6e;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      margin-right: 20px; }
 
 /*==========  Desktop First  ==========*/
 /* Extra Large Devices, Wide Screens */
