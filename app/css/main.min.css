@@ -2315,6 +2315,7 @@ body {
             transform: rotateZ(2deg); }
   .nav__item {
     text-align: center;
+    white-space: nowrap;
     background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f5), to(#e6e6eb));
     background: -webkit-linear-gradient(top, #f2f2f5, #e6e6eb);
     background: -o-linear-gradient(top, #f2f2f5, #e6e6eb);
@@ -2616,7 +2617,7 @@ body {
     line-height: 48px;
     text-transform: uppercase;
     font-family: Roboto Condensed, sans-serif;
-    color: #282833;
+    color: #3a3a42;
     width: 130px;
     margin: 0 auto;
     padding-bottom: 16px;
@@ -2677,6 +2678,9 @@ body {
   padding: 0 10px 10px 10px; }
 
 .newsList__newsLink {
+  text-decoration: none; }
+
+.newsList__imgWrap {
   text-decoration: none; }
 
 .newsList__block::after {
@@ -2779,7 +2783,7 @@ body {
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       transition: color 0.3s;
-      color: #282833; }
+      color: #3a3a42; }
 
 .schoolDepartment__teacherImage {
   width: 150px;
@@ -2823,11 +2827,12 @@ body {
   padding-bottom: 3vw; }
   .schoolDepartment__department h2 {
     text-transform: uppercase;
-    color: #8484aa;
+    color: #3a3a42;
     text-align: center;
     margin-left: 15vw;
     margin-right: 15vw;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-family: Roboto Condensed, sans-serif; }
 
 /*==========  Desktop First  ==========*/
 /* Extra Large Devices, Wide Screens */
