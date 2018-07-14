@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="css/main.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+		<script type="text/javascript">
+			tinymce.init({
+				selector: '',
+				theme: 'modern',
+				width: 600,
+				height: 300,
+				plugins: [
+					'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+					'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+					'save table contextmenu directionality emoticons template paste textcolor'
+				],
+				toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+			});
+			</script>
 	</head>
 <body>	
 	<div class="index">
@@ -21,15 +36,17 @@
 								</a>
 							</div>
 
-							<h2 class="leftPanel__headerNews">Wydarzenia</h2>
+							<a href="news.html" class="leftPanel__headerNews"><h2 class="leftPanel__headerNews">Останні новини</h2></a> 
 
 							<div class="leftPanel__news news">
 
 								<div class="news__block">
 									<div class="news__table">
 										<div class="news__info">
-											<img src="img/main-page/main (4).jpg" alt="">
-											<h2 class="news__header">Pierwszy tytuł</h2>
+											<a href="motherDay.html" class="news__link">
+												<img src="img/main-page/main (6).jpg" alt="">
+												<h2 class="news__header">Pierwszy tytuł</h2>
+											</a>
 											<p class="news__about">Ut imperdiet accumsan sapien ac imperdiet. Ut molestie ipsum nulla. Pellentesque sagittis feugiat gravida. Nulla ac risus nibh. In malesuada felis sit amet. Lorem ipsum dolor sit amet, consectetur a facilis, fugiat enim perferendis ut ipsam suscipit, in distinctio, consectetur blanditiis excepturi repudiandae. </p>
 										</div>
 									</div>
@@ -38,27 +55,19 @@
 								<div class="news__block">
 									<div class="news__table">
 										<div class="news__info">
-											<img src="img/main-page/main (6).jpg" alt="">
-											<h2 class="news__header">Pierwszy tytuł</h2>
+											<a href="motherDay.html" class="news__link">
+												<img src="img/main-page/main (6).jpg" alt="">
+												<h2 class="news__header">Pierwszy tytuł</h2>
+											</a>
 											<p class="news__about">Ut imperdiet accumsan sapien ac imperdiet. Ut molestie ipsum nulla. Pellentesque sagittis feugiat gravida. Nulla ac risus nibh. In malesuada felis sit amet.</p>
 										</div>
 									</div>
 								</div>
-								
-								<div class="news__block">
-									<div class="news__table">
-										<div class="news__info">
-											<img src="img/main-page/main (5).jpg" alt="">
-											<h2 class="news__header">Pierwszy tytuł</h2>
-											<p class="news__about">Ut imperdiet accumsan sapien ac imperdiet. Ut molestie ipsum nulla. Pellentesque sagittis feugiat gravida. Nulla ac risus nibh. In malesuada felis sit amet.</p>
-										</div>
-									</div>
-								</div>
+							</div>
 
-							</div>
-							<div class="leftPanel__books">
+							<!-- <div class="leftPanel__books">
 								<img src="img/main-page/books.png" alt="books-img">
-							</div>
+							</div> -->
 							
 							<div class="leftPanel__social">
 								<a href="" class="leftPanel__facebook"></a>
@@ -86,11 +95,10 @@
 										<a class="nav__item" href="official.html">Офіційні документи</a>
 									</ul>
 								</nav>
-
 								<blockquote class="menu__quote">“Morbi pretium semper ullamcorper. Nunc augue massa, dictum sed fringilla in, imperdiet et sapien.”</blockquote>
 							</div>
 
-							</div>
+						</div>
 							
 						<div class="main__content content">
 						
