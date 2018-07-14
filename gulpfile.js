@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
-		uglify = require('gulp-uglify'),
+		uglify = require('gulp-uglify-es').default,
 		rename = require('gulp-rename'),
 		concat = require('gulp-concat'),
 		autoprefixer = require('gulp-autoprefixer'),
@@ -11,8 +11,8 @@ var gulp = require('gulp'),
 
 gulp.task('js', function() {
 	return gulp.src(['app/js/slider.js']) 
+		.pipe(uglify())
 		.pipe(concat('common.min.js'))
-		//.pipe(uglify())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.stream());
 });
@@ -21,7 +21,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename("main.min.css"))
-		//.pipe(cleanCSS())
+		.pipe(cleanCSS())
 		.pipe(autoprefixer({
 			browsers: ['last 15 versions'], 
 		}))
@@ -61,7 +61,7 @@ gulp.task('build', ['imagemin', 'sass', 'js'], function() {
 	var buildCss = gulp.src('app/css/main.min.css')
 		.pipe(gulp.dest('dist/css'));
 	
-	var buildJs = gulp.src('app/js/script.min.js')
+	var buildJs = gulp.src('app/js/common.min.js')
 		.pipe(gulp.dest('dist/js'));
 	
 	var buildFonts = gulp.src('app/fonts/**/*')
